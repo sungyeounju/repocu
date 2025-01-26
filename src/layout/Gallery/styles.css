@@ -1,0 +1,24 @@
+.pswp__zoom-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.pswp__img {
+  width: 100vw !important;
+  height: auto !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pswp--touch .pswp__button--arrow {
+  visibility: visible;
+  width: 40px;
+  height: 40px;
+  background: url(../../assets/ico/btn_arrow_40.png) 0/100% no-repeat;
+}
+.pswp--touch .pswp__button--arrow--next {
+  transform: rotate(180deg);
+}
+.pswp--touch .pswp__button--arrow svg {
+  display: none;
+}
