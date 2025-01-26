@@ -12,6 +12,7 @@ function Title({ title }) {
 }
 export default Title;
 const Titleg = styled.h2`
+  margin-top: 130px;
   font-size: 20px;
   line-height: 28px;
   font-weight: 500;

@@ -27,7 +27,7 @@ http://scripts.sil.org/OFL
 
 @font-face {
   font-family: "Pretendard";
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
   src: local("Pretendard Medium"),
     url(./pretendard/Pretendard-Medium.woff2) format("woff2"),
@@ -36,7 +36,7 @@ http://scripts.sil.org/OFL
 
 @font-face {
   font-family: "Pretendard";
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
   src: local("Pretendard Regular"),
     url(./pretendard/Pretendard-Regular.woff2) format("woff2"),
