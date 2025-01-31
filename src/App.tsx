@@ -9,12 +9,13 @@ import Cast from "./layout/Cast";
 import Account from "./layout/Account";
 import GuestBook from "./layout/GuestBook";
 import { firestore } from "./firebase-config.js";
+import Showbox from "./layout/Showbox";
 function App() {
   console.log(firestore);
   return (
     <>
       <Container>
-        <GuestBook />
+        <Showbox />
         <PhotoGallery />
         <Account />
       </Container>
