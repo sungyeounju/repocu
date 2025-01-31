@@ -11,10 +11,12 @@ import "./styles.css";
 import Slide01 from "../../assets/ico/slide01.png";
 import Slide02 from "../../assets/ico/slide02.png";
 import Slide03 from "../../assets/ico/slide03.png";
+import Title from "../../component/Title";
 
 function PhotoGallery() {
   return (
     <>
+      <Title title={"GALLERY"} />
       <Wrapper>
         <Gallery>
           <Swiper
@@ -63,6 +65,7 @@ const Wrapper = styled.div`
     align-items: center;
     width: 220px;
     height: 314px;
+    margin-top: 40px;
     background-size: 100%;
     &:nth-child(3n + 1) {
       background-image: url(${Slide01});

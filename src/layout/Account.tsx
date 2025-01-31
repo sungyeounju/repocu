@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Title from "../component/Title";
 import styled from "styled-components";
+import Title from "../component/Title";
 import btnAccount from "../assets/ico/btn_account.png";
 import btnKakaopay from "../assets/ico/btn_kakaopay.png";
 
