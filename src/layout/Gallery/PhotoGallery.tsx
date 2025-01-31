@@ -50,6 +50,7 @@ function PhotoGallery() {
               );
             })}
           </Swiper>
+          <TxtDesc>클릭 시 이미지를 크게 보실 수 있습니다.</TxtDesc>
         </Gallery>
       </Wrapper>
     </>
@@ -86,4 +87,10 @@ const Thumb = styled.span`
   border-radius: 4px;
   background-size: cover;
   background-position: center;
+`;
+const TxtDesc = styled.span`
+  display: block;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #baae9f;
 `;

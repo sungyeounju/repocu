@@ -5,6 +5,7 @@ import styled from "styled-components";
 import PhotoGallery from "./layout/Gallery/PhotoGallery";
 import PhotoGallery2 from "./layout/Gallery/PhotoGallery2";
 import Ticket from "./layout/Ticket";
+import Location from "./layout/Location";
 import Cast from "./layout/Cast";
 import Account from "./layout/Account";
 import GuestBook from "./layout/GuestBook";
@@ -16,7 +17,10 @@ function App() {
     <>
       <Container>
         <Showbox />
+        <Cast />
+        <Ticket />
         <PhotoGallery />
+        <Location />
         <Account />
       </Container>
     </>

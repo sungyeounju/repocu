@@ -9,7 +9,7 @@ http://scripts.sil.org/OFL
 
 @font-face {
   font-family: "Pretendard";
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
   src: local("Pretendard Bold"),
     url(./pretendard/Pretendard-Bold.woff2) format("woff2"),
@@ -18,7 +18,7 @@ http://scripts.sil.org/OFL
 
 @font-face {
   font-family: "Pretendard";
-  font-weight: 600;
+  font-weight: 500;
   font-display: swap;
   src: local("Pretendard SemiBold"),
     url(./pretendard/Pretendard-SemiBold.woff2) format("woff2"),
