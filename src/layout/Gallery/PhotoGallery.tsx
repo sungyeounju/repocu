@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import Photo from "./Photos";
@@ -23,6 +24,8 @@ function PhotoGallery() {
             slidesPerView={"auto"}
             centeredSlides={true}
             loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            modules={[Autoplay]}
             // onSlideChange={() => console.log("slide change")}
             // onSwiper={(swiper) => console.log(swiper)}
           >
@@ -59,6 +62,9 @@ function PhotoGallery() {
 export default PhotoGallery;
 
 const Wrapper = styled.div`
+  .swiper-wrapper {
+    transition: 0.5s;
+  }
   .swiper-slide {
     display: flex;
     flex-shrink: 0;

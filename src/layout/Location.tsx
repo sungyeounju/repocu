@@ -104,6 +104,29 @@ const ListBtn = styled.ul`
     line-height: 44px;
     font-size: 12px;
     font-weight: 500;
+    &:nth-child(2) {
+      position: relative;
+      &:before {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 1px;
+        height: 24px;
+        background: #baae9f;
+        content: "";
+      }
+      &:after {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 1px;
+        height: 24px;
+        background: #baae9f;
+        content: "";
+      }
+    }
   }
 `;
 const WayBox = styled.div`
