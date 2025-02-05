@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { styled } from "styled-components";
 import Title from "../component/Title";
 import MapApi from "./Map/MapApi";
@@ -7,7 +7,7 @@ import MapApi from "./Map/MapApi";
 import IcoCopy from "../assets/ico/ic_copy_16.png";
 
 function Location() {
-  const textlink = "그랜드 컨벤션홀 서울 영등포구 은행로 30 B1층";
+  const textlink = "서울 영등포구 은행로 30 B1층";
   let latTxt = 37.52817734076299;
   let longTxt = 126.92281277080815;
   const copyClipboard = async (text: string, successAction?: () => void) => {
@@ -30,7 +30,7 @@ function Location() {
             })
           }
         >
-          그랜드 컨벤션홀
+          더파티움 여의도 그랜드컨벤션홀
           <br />
           서울 영등포구 은행로 30 B1층
           <span className="img-copy" />
@@ -40,9 +40,15 @@ function Location() {
           <MapApi latitude={latTxt} longitude={longTxt} />
         </MapBox>
         <ListBtn>
-          <li>네이버 지도</li>
-          <li>카카오 내비</li>
-          <li>T MAP</li>
+          <li>
+            <Link to="https://naver.me/5PV4xVbp">네이버 지도</Link>
+          </li>
+          <li>
+            <Link to="https://kko.kakao.com/pr_N9lVNAe">카카오 지도</Link>
+          </li>
+          <li>
+            <Link to="https://tmap.life/8387508d">T MAP</Link>
+          </li>
         </ListBtn>
         <WayBox>
           <dl>
@@ -101,9 +107,12 @@ const ListBtn = styled.ul`
   border-radius: 50px;
   li {
     width: 114px;
-    line-height: 44px;
-    font-size: 12px;
-    font-weight: 500;
+    a {
+      display: block;
+      line-height: 44px;
+      font-size: 12px;
+      font-weight: 500;
+    }
     &:nth-child(2) {
       position: relative;
       &:before {

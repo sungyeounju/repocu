@@ -27,7 +27,7 @@ function Cover() {
             <span className="ico-date ico">날짜</span>
             <span className="txt-date">2025. 3. 9 11:20am</span>
             <span className="ico-place ico">장소</span>
-            <span className="txt-place">그랜드컨벤션홀</span>
+            <span className="txt-place">더파티움 여의도 그랜드컨벤션홀</span>
           </Footer>
         </Inner>
       </Wrapper>

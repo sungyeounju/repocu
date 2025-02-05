@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import TitleIco from "../assets/ico/ic_title.png";
 
 function Title({ title }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
-      <Titleg>{title}</Titleg>
+      <Titleg data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
+        {title}
+      </Titleg>
     </>
   );
 }

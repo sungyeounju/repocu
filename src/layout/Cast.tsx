@@ -1,8 +1,13 @@
 import Title from "../component/Title";
-import React from "react";
 import { styled } from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Cast() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const castArray = [
     { desc: "장진원 · 윤혜연 의 아들", name: "장동우", eng: "JANG DONGWOO" },
     { desc: "김종화 · 김정화 의 딸", name: "김서정", eng: "KIM SEOJEONG" },
@@ -11,7 +16,7 @@ function Cast() {
     <>
       <Title title={"CAST"} />
       {castArray.map((item, idx) => (
-        <Itembox key={idx}>
+        <Itembox key={idx} data-aos="fade-up" data-aos-duration="1500">
           <TxtDesc>{item.desc}</TxtDesc>
           <TitName>{item.name}</TitName>
           <NameEng>{item.eng}</NameEng>

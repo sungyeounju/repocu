@@ -6,6 +6,7 @@
     "16": "^0.0.2",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "aos": "^2.3.4",
     "cra-template": "1.2.0",
     "firebase": "^11.2.0",
     "react": "^19.0.0",
