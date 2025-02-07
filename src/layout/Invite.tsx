@@ -75,7 +75,7 @@ const Wrapper = styled.div`
   background-color: #070c0d;
   &:after {
     position: relative;
-    top: 98px;
+    top: 68px;
     display: block;
     width: 100%;
     height: 115px;

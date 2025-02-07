@@ -13,21 +13,17 @@ import { firestore } from "./firebase-config.js";
 import Showbox from "./layout/Showbox";
 import Footer from "./layout/Footer";
 import Invite from "./layout/Invite";
+import { Route, Routes } from "react-router";
+import Dwsj0309 from "./pages/Dwsj0309";
+import Home from "./pages/main/Home";
 function App() {
   console.log(firestore);
   return (
     <>
-      <Container>
-        <Cover />
-        <Invite />
-        <Showbox />
-        <Cast />
-        <Ticket />
-        <PhotoGallery />
-        <Location />
-        <Account />
-        <Footer />
-      </Container>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/Dwsj0309" element={<Dwsj0309 />}></Route>
+      </Routes>
     </>
   );
 }

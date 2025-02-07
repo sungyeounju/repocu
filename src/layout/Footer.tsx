@@ -22,7 +22,7 @@ function Footer() {
       nameKo: "장동우",
     },
     {
-      castEn: "BIRDE",
+      castEn: "BRIDE",
       nameEn: "KIM SEOJEONG",
       castKo: "신부",
       nameKo: "김서정",
@@ -40,13 +40,13 @@ function Footer() {
       nameKo: "윤혜원",
     },
     {
-      castEn: "BIRDE'S FATHER",
+      castEn: "BRIDE'S FATHER",
       nameEn: "KIM JONGHWA",
       castKo: "신부 아버지",
       nameKo: "김종화",
     },
     {
-      castEn: "BIRDE'S MOTHER",
+      castEn: "BRIDE'S MOTHER",
       nameEn: "KIM JEONGHWA",
       castKo: "신부 어머니",
       nameKo: "김정화",

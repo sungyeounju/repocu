@@ -14,14 +14,16 @@ function Cast() {
   ];
   return (
     <>
-      <Title title={"CAST"} />
-      {castArray.map((item, idx) => (
-        <Itembox key={idx} data-aos="fade-up" data-aos-duration="1500">
-          <TxtDesc>{item.desc}</TxtDesc>
-          <TitName>{item.name}</TitName>
-          <NameEng>{item.eng}</NameEng>
-        </Itembox>
-      ))}
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <Title title={"CAST"} />
+        {castArray.map((item, idx) => (
+          <Itembox key={idx}>
+            <TxtDesc>{item.desc}</TxtDesc>
+            <TitName>{item.name}</TitName>
+            <NameEng>{item.eng}</NameEng>
+          </Itembox>
+        ))}
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { Gallery, Item } from "react-photoswipe-gallery";
@@ -6,7 +6,8 @@ import "photoswipe/style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Photo from "./Photos";
 import "./styles.css";
 import Slide01 from "../../assets/ico/slide01.png";
@@ -15,8 +16,12 @@ import Slide03 from "../../assets/ico/slide03.png";
 import Title from "../../component/Title";
 
 function PhotoGallery() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
+      <div data-aos="fade-up" data-aos-duration="1500"></div>
       <Title title={"GALLERY"} />
       <Wrapper>
         <Gallery>

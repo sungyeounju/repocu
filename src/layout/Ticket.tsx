@@ -23,26 +23,25 @@ function Ticket() {
   };
   return (
     <>
-      <img
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-offset="50"
-        src={TitTicket}
-        alt=""
-        width={195}
-        style={{ marginTop: "130px" }}
-      />
-      <Wrapper className={click ? "fliped" : ""} onClick={handleFlip}>
-        <TicketBox data-aos="flip-left" data-aos-duration="1500">
-          <InnerTicket>
-            <span className="txt-date">{date}</span>
-            <span className="txt-time">{time}</span>
-            <span className="txt-place">{place}</span>
-            <span className="txt-place txt-place2">{place2}</span>
-          </InnerTicket>
-        </TicketBox>
-        <TicketImg></TicketImg>
-      </Wrapper>
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <img
+          src={TitTicket}
+          alt=""
+          width={195}
+          style={{ marginTop: "130px" }}
+        />
+        <Wrapper className={click ? "fliped" : ""} onClick={handleFlip}>
+          <TicketBox data-aos="flip-left" data-aos-duration="1500">
+            <InnerTicket>
+              <span className="txt-date">{date}</span>
+              <span className="txt-time">{time}</span>
+              <span className="txt-place">{place}</span>
+              <span className="txt-place txt-place2">{place2}</span>
+            </InnerTicket>
+          </TicketBox>
+          <TicketImg></TicketImg>
+        </Wrapper>
+      </div>
     </>
   );
 }
