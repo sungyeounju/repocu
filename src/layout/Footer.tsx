@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative, Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useEffect } from "react";
+import { Link } from "react-router";
 
 function Footer() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function Footer() {
       nameKo: "장동우",
     },
     {
-      castEn: "BRIDE",
+      castEn: "BIRDE",
       nameEn: "KIM SEOJEONG",
       castKo: "신부",
       nameKo: "김서정",
@@ -40,13 +41,13 @@ function Footer() {
       nameKo: "윤혜원",
     },
     {
-      castEn: "BRIDE'S FATHER",
+      castEn: "BIRDE'S FATHER",
       nameEn: "KIM JONGHWA",
       castKo: "신부 아버지",
       nameKo: "김종화",
     },
     {
-      castEn: "BRIDE'S MOTHER",
+      castEn: "BIRDE'S MOTHER",
       nameEn: "KIM JEONGHWA",
       castKo: "신부 어머니",
       nameKo: "김정화",
@@ -141,8 +142,10 @@ function Footer() {
               );
             })}
           </CastBox>
-          <LogoBox data-aos="fade">
-            <Logo src={logo} width="149"></Logo>
+          <LogoBox className="logo-box">
+            <Link to="https://www.instagram.com/repocu.love/">
+              <Logo src={logo} width="149"></Logo>
+            </Link>
           </LogoBox>
         </GroupCast>
       </Wrapper>
@@ -197,10 +200,13 @@ const AniCast = keyframes`
 const GroupCast = styled.div`
   &.aos-animate {
     .cast-box1 {
-      animation: ${AniCast} 3s linear forwards;
+      animation: ${AniCast} 6s forwards;
     }
     .cast-box2 {
-      animation: ${AniCast} 2s 2s linear forwards;
+      animation: ${AniCast} 5s 2s forwards;
+    }
+    .logo-box {
+      animation: ${AniCast} 5s 3s forwards;
     }
   }
 `;
@@ -210,6 +216,7 @@ const LogoBox = styled.div`
   z-index: 2;
   width: 100%;
   background: #080c0d;
+  transform: translateY(120%);
 `;
 const Logo = styled.img``;
 const CastBox = styled.div`

@@ -5,21 +5,24 @@ import Showbox from "./../layout/Showbox";
 import Cast from "./../layout/Cast";
 import Ticket from "./../layout/Ticket";
 import PhotoGallery from "./../layout/Gallery/PhotoGallery";
+import PhotoGallery2 from "./../layout/Gallery/PhotoGallery2";
 import Location from "./../layout/Location";
 import Account from "./../layout/Account";
 import Footer from "./../layout/Footer";
 function Dwsj0309() {
   return (
     <>
-      <Cover />
-      <Invite />
-      <Showbox />
-      <Cast />
-      <Ticket />
-      <PhotoGallery />
-      <Location />
-      <Account />
-      <Footer />
+      <Container>
+        <Cover />
+        <Invite />
+        <Showbox />
+        <Cast />
+        <Ticket />
+        <PhotoGallery />
+        <Location />
+        <Account />
+        <Footer />
+      </Container>
     </>
   );
 }

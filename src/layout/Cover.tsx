@@ -7,29 +7,33 @@ import icPlcae from "../assets/ico/ic_place_14.png";
 import txtBride from "../assets/ico/txt_bride.png";
 import txtGroom from "../assets/ico/txt_groom.png";
 import imgCover from "../assets/image/img_cover.png";
+import { useState } from "react";
 function Cover() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
       <Wrapper>
-        <Inner style={{ backgroundImage: `url(${imgCover})` }}>
-          <Titimg src={titCover} />
-          <Itembox>
-            <Item>
-              <img src={txtBride} alt="신부" width="27" />
-              <strong className="tit-name">SEOJEONG</strong>
-            </Item>
-            <Item>
-              <img src={txtGroom} alt="신랑" width="27" />
-              <strong className="tit-name">DONGWOO</strong>
-            </Item>
-          </Itembox>
-          <Footer>
-            <span className="ico-date ico">날짜</span>
-            <span className="txt-date">2025. 3. 9 11:20am</span>
-            <span className="ico-place ico">장소</span>
-            <span className="txt-place">더파티움 여의도 그랜드컨벤션홀</span>
-          </Footer>
-        </Inner>
+        {!isLoaded && (
+          <Inner style={{ backgroundImage: `url(${imgCover})` }}>
+            <Titimg src={titCover} />
+            <Itembox>
+              <Item>
+                <img src={txtBride} alt="신부" width="27" />
+                <strong className="tit-name">SEOJEONG</strong>
+              </Item>
+              <Item>
+                <img src={txtGroom} alt="신랑" width="27" />
+                <strong className="tit-name">DONGWOO</strong>
+              </Item>
+            </Itembox>
+            <Footer>
+              <span className="ico-date ico">날짜</span>
+              <span className="txt-date">2025. 3. 9 11:20am</span>
+              <span className="ico-place ico">장소</span>
+              <span className="txt-place">더파티움 여의도 그랜드컨벤션홀</span>
+            </Footer>
+          </Inner>
+        )}
       </Wrapper>
     </>
   );

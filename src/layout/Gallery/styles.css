@@ -3,6 +3,7 @@
   justify-content: center;
   align-content: center;
   height: 100vh;
+  transition: 0 !important;
 }
 .pswp__img {
   width: 100vw !important;
