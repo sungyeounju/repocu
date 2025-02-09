@@ -1,19 +1,24 @@
+import { useEffect } from "react";
+import { Link } from "react-router";
 import { keyframes, styled } from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import parretn01 from "../assets/ico/pattern01.png";
 import img_frame from "../assets/ico/img_ending_frame.png";
 import logo from "../assets/ico/footer_logo.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Autoplay } from "swiper/modules";
-import "swiper/css";
-import { useEffect } from "react";
-import { Link } from "react-router";
+import icoShare from "../assets/ico/ico_share.png";
+import icoInsta from "../assets/ico/ico_instagram.png";
+import icoConti from "../assets/ico/img_tobecontinued.png";
+
+import img01 from "../assets/image/img_frame01.png";
+import img02 from "../assets/image/img_frame02.png";
+import img03 from "../assets/image/img_frame03.png";
+import img04 from "../assets/image/img_frame04.png";
+import img05 from "../assets/image/img_frame05.png";
 
 function Footer() {
   useEffect(() => {
     AOS.init();
-    AOS.refresh();
   }, []);
   const Casting = [
     {
@@ -67,45 +72,57 @@ function Footer() {
       nameKo: "케빈",
     },
   ];
-  const imageFiles = [
-    require("../assets/image/img_frame01.png"),
-    require("../assets/image/img_frame02.png"),
-    require("../assets/image/img_frame03.png"),
-    require("../assets/image/img_frame04.png"),
-    require("../assets/image/img_frame05.png"),
-  ];
+  const copyClipboard = async (text: string, successMessage?: () => void) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (successMessage) alert(successMessage);
+      alert("주소가 복사되었습니다!");
+    } catch (error) {
+      // alert("error");
+    }
+  };
+  const handleShare = () => {
+    const shareUrl = "https://www.repocu.shop/Dwsj0309";
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "동우 서정 청첩장",
+          text: "동우 서정 결혼합니다",
+          url: shareUrl,
+        })
+        .then(() => console.log("공유 성공"))
+        .catch(() => copyClipboard(shareUrl));
+    } else {
+      copyClipboard(shareUrl);
+    }
+  };
   return (
     <>
       <Wrapper>
-        <Video>
-          <Swiper
-            loop={true}
-            autoplay={{ delay: 1500, disableOnInteraction: false }}
-            grabCursor={true}
-            effect={"creative"}
-            creativeEffect={{
-              prev: {
-                shadow: true,
-                translate: [0, "-20%", -1],
-              },
-              next: {
-                translate: [0, "100%", 0],
-              },
-            }}
-            modules={[EffectCreative, Autoplay]}
-            className="mySwiper3"
-          >
-            {imageFiles.map((imgSrc, idx) => {
-              return (
-                <SwiperSlide
-                  key={idx}
-                  style={{
-                    backgroundImage: `url(${imgSrc})`,
-                  }}
-                ></SwiperSlide>
-              );
-            })}
-          </Swiper>
+        <Video data-aos="fade">
+          <InnerVideo>
+            <ImgVideo
+              className="thumb-img01"
+              style={{ backgroundImage: `url(${img01})` }}
+            ></ImgVideo>
+            <ImgVideo
+              className="thumb-img02"
+              style={{ backgroundImage: `url(${img02})` }}
+            ></ImgVideo>
+            <ImgVideo
+              className="thumb-img03"
+              style={{ backgroundImage: `url(${img03})` }}
+            ></ImgVideo>
+            <ImgVideo
+              className="thumb-img04"
+              style={{ backgroundImage: `url(${img04})` }}
+            ></ImgVideo>
+            <ImgVideo
+              className="thumb-img05"
+              style={{ backgroundImage: `url(${img05})` }}
+            ></ImgVideo>
+            <IcoTxt className="ico-txt"></IcoTxt>
+          </InnerVideo>
         </Video>
         <GroupCast data-aos="fade-up">
           <CastBox className="cast-box1">
@@ -142,11 +159,29 @@ function Footer() {
               );
             })}
           </CastBox>
-          <LogoBox className="logo-box">
-            <Link to="https://www.instagram.com/repocu.love/">
-              <Logo src={logo} width="149"></Logo>
-            </Link>
-          </LogoBox>
+          <CastBox className="cast-box3">
+            <img src={logo} alt="Copyright 2025 REPOCU" width="149" />
+          </CastBox>
+          <ShareSns>
+            <ul className="list-sns">
+              <li>
+                <Link
+                  to="https://www.instagram.com/repocu.love/"
+                  className="link-sns link-insta screen-out"
+                >
+                  레포쿠 인스타그램
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleShare()}
+                  className="link-sns link-share screen-out"
+                >
+                  공유하기
+                </button>
+              </li>
+            </ul>
+          </ShareSns>
         </GroupCast>
       </Wrapper>
     </>
@@ -169,18 +204,21 @@ const Wrapper = styled.div`
     transform: rotate(180deg);
   }
 `;
+const ImgVideoAni = keyframes`
+  0%{top: -100%;}
+  70%{top: 10%;}
+  100%{top: 0;}
+`;
+const IcoRot = keyframes`
+  0%{transform:scale(0) rotate(720deg);opacity:0;};
+  20%{opacity:1;}
+  100%{transform:scale(1) rotate(0);opacity:1;};
+`;
 const Video = styled.div`
   position: relative;
   width: 347px;
   height: 261px;
   margin: 0 auto;
-  .swiper {
-  }
-  .swiper-slide {
-    width: 347px;
-    height: 261px;
-    background-size: cover;
-  }
   &:before {
     display: inline-block;
     position: absolute;
@@ -192,6 +230,53 @@ const Video = styled.div`
     content: "";
     z-index: 10;
   }
+  &.aos-animate {
+    .thumb-img02 {
+      animation: ${ImgVideoAni} 0.6s 1s linear forwards;
+    }
+    .thumb-img03 {
+      animation: ${ImgVideoAni} 0.6s 2.5s linear forwards;
+    }
+    .thumb-img04 {
+      animation: ${ImgVideoAni} 0.6s 4s linear forwards;
+    }
+    .thumb-img05 {
+      animation: ${ImgVideoAni} 0.6s 5.5s linear forwards;
+    }
+    .ico-txt {
+      animation: ${IcoRot} 1.5s 5.7s forwards;
+    }
+  }
+`;
+const InnerVideo = styled.div`
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 347px;
+  height: 261px;
+`;
+const IcoTxt = styled.span`
+  opacity: 0;
+  position: relative;
+  display: block;
+  width: 141px;
+  height: 75px;
+  background: url(${icoConti}) 0/100% no-repeat;
+`;
+const ImgVideo = styled.span`
+  position: absolute;
+  display: block;
+  width: 347px;
+  height: 261px;
+  left: 0;
+  top: -100%;
+  background-size: 100%;
+  transition: 1s;
+  &.thumb-img01 {
+    top: 0;
+  }
 `;
 const AniCast = keyframes`
   0%{transform: translateY(120%);opacity:0;}
@@ -200,25 +285,16 @@ const AniCast = keyframes`
 const GroupCast = styled.div`
   &.aos-animate {
     .cast-box1 {
-      animation: ${AniCast} 6s forwards;
+      animation: ${AniCast} 5s forwards;
     }
     .cast-box2 {
-      animation: ${AniCast} 5s 2s forwards;
+      animation: ${AniCast} 4s 2s forwards;
     }
-    .logo-box {
-      animation: ${AniCast} 5s 3s forwards;
+    .cast-box3 {
+      animation: ${AniCast} 4s 3s forwards;
     }
   }
 `;
-const LogoBox = styled.div`
-  position: relative;
-  padding-bottom: 140px;
-  z-index: 2;
-  width: 100%;
-  background: #080c0d;
-  transform: translateY(120%);
-`;
-const Logo = styled.img``;
 const CastBox = styled.div`
   position: relative;
   margin-top: 100px;
@@ -232,6 +308,10 @@ const CastBox = styled.div`
     margin-top: 130px;
     padding-bottom: 130px;
     z-index: 1;
+  }
+  &.cast-box3 {
+    margin-top: 0;
+    z-index: 2;
   }
 `;
 const CastTit = styled.strong`
@@ -273,5 +353,33 @@ const Name = styled.span`
   color: #fff;
   &.en {
     font-weight: 500;
+  }
+`;
+const ShareSns = styled.div`
+  position: relative;
+  z-index: 9;
+  padding: 60px 0 100px;
+  background: #080c0d;
+  .list-sns {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    li {
+      width: 36px;
+      height: 36px;
+      margin: 0 9px;
+    }
+  }
+  .link-sns {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-size: 100%;
+    &.link-insta {
+      background-image: url(${icoInsta});
+    }
+    &.link-share {
+      background-image: url(${icoShare});
+    }
   }
 `;

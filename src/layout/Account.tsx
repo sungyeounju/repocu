@@ -61,57 +61,55 @@ function Account() {
   };
   return (
     <>
-      <div>
-        <Title title={"Account"} />
-        <Desc>
-          전해주시는 축하의 마음은 소중하게 간직하여
-          <br />
-          좋은 부부의 모습으로 보답하겠습니다.
-        </Desc>
-        <TabList>
-          {tabList.map((el, index) => {
-            return (
-              <li
-                key={index}
-                className={currenttab === index ? "active" : "menu"}
-              >
-                <BtnTab onClick={() => tabHandle(index)}>{el.title}</BtnTab>
-              </li>
-            );
-          })}
-        </TabList>
+      <Title title={"Account"} />
+      <Desc>
+        전해주시는 축하의 마음은 소중하게 간직하여
+        <br />
+        좋은 부부의 모습으로 보답하겠습니다.
+      </Desc>
+      <TabList>
+        {tabList.map((el, index) => {
+          return (
+            <li
+              key={index}
+              className={currenttab === index ? "active" : "menu"}
+            >
+              <BtnTab onClick={() => tabHandle(index)}>{el.title}</BtnTab>
+            </li>
+          );
+        })}
+      </TabList>
 
-        <InnerPerson>
-          {tabList[currenttab].content.map((person, index) => {
-            return (
-              <PersonList key={index}>
-                <div className="left-item">
-                  <span className="txt-tag">{person.tag}</span>
-                  <span className="txt-name">{person.name}</span>
-                </div>
-                <div className="right-item">
-                  {person.value2 && (
-                    <Link to={person.value2} className="btn-item btn-kakaopay">
-                      카카오페이
-                    </Link>
-                  )}
-                  <button
-                    className="btn-item btn-acconut"
-                    value={person.value1}
-                    onClick={() => {
-                      copyClipboard(person.value1, () => {
-                        alert(person.value1 + " 복사 되었습니다 💌");
-                      });
-                    }}
-                  >
-                    계좌복사
-                  </button>
-                </div>
-              </PersonList>
-            );
-          })}
-        </InnerPerson>
-      </div>
+      <InnerPerson>
+        {tabList[currenttab].content.map((person, index) => {
+          return (
+            <PersonList key={index}>
+              <div className="left-item">
+                <span className="txt-tag">{person.tag}</span>
+                <span className="txt-name">{person.name}</span>
+              </div>
+              <div className="right-item">
+                {person.value2 && (
+                  <Link to={person.value2} className="btn-item btn-kakaopay">
+                    카카오페이
+                  </Link>
+                )}
+                <button
+                  className="btn-item btn-acconut"
+                  value={person.value1}
+                  onClick={() => {
+                    copyClipboard(person.value1, () => {
+                      alert(person.value1 + "\n복사 되었습니다 💌");
+                    });
+                  }}
+                >
+                  계좌복사
+                </button>
+              </div>
+            </PersonList>
+          );
+        })}
+      </InnerPerson>
     </>
   );
 }

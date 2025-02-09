@@ -23,14 +23,17 @@ function Ticket() {
   };
   return (
     <>
-      <div data-aos="fade-up" data-aos-duration="1500">
+      <Wrapper data-aos="fade-up" data-aos-duration="1500">
         <img
           src={TitTicket}
           alt=""
           width={195}
           style={{ marginTop: "130px" }}
         />
-        <Wrapper className={click ? "fliped" : ""} onClick={handleFlip}>
+        <BoxTicket
+          className={click ? "fliped" : "box-ticket"}
+          onClick={handleFlip}
+        >
           <TicketBox data-aos="flip-left" data-aos-duration="1500">
             <InnerTicket>
               <span className="txt-date">{date}</span>
@@ -40,14 +43,25 @@ function Ticket() {
             </InnerTicket>
           </TicketBox>
           <TicketImg></TicketImg>
-        </Wrapper>
-      </div>
+        </BoxTicket>
+      </Wrapper>
     </>
   );
 }
 export default Ticket;
 
+const flipAni = keyframes`
+  0%, 100%{transform: perspective(800px) rotateY(0deg);}
+  50%{transform: perspective(800px) rotateY(-15deg);}
+`;
 const Wrapper = styled.div`
+  &.aos-animate {
+    .box-ticket {
+      animation: ${flipAni} 1.5s 3s;
+    }
+  }
+`;
+const BoxTicket = styled.div`
   position: relative;
   width: 285px;
   height: 540px;

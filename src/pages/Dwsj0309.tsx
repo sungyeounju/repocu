@@ -9,18 +9,36 @@ import PhotoGallery2 from "./../layout/Gallery/PhotoGallery2";
 import Location from "./../layout/Location";
 import Account from "./../layout/Account";
 import Footer from "./../layout/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function Dwsj0309() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Container>
         <Cover />
         <Invite />
-        <Showbox />
-        <Cast />
-        <Ticket />
-        <PhotoGallery />
-        <Location />
-        <Account />
+        <div data-aos="fade" data-aos-duration="1500">
+          <Showbox />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <Cast />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <Ticket />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <PhotoGallery />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <Location />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <Account />
+        </div>
         <Footer />
       </Container>
     </>
