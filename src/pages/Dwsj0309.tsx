@@ -30,4 +30,6 @@ export default Dwsj0309;
 
 const Container = styled.div`
   overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
 `;

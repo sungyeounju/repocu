@@ -61,7 +61,7 @@ const Inner = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 40%;
     background: linear-gradient(0, #080c0d 30%, transparent);
     content: "";
   }
@@ -70,7 +70,6 @@ const Titimg = styled.img`
   width: 233px;
   margin-top: 90px;
 `;
-const Desc = styled.div``;
 const Itembox = styled.div`
   position: absolute;
   left: 0;

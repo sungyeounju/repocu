@@ -8,10 +8,10 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 function Ticket() {
-  const date = "2025. 3. 9 Sat.";
+  const date = "2025. 3. 9 Sun.";
   const time = "11:20 am";
-  const place = "그랜드 컨벤션";
-  const place2 = "서울 영등포구 은행로 30 B1층";
+  const place = "서울 영등포구 은행로 30";
+  const place2 = "더파티움 여의도 B1F 그랜드컨벤션홀";
 
   useEffect(() => {
     AOS.init();
