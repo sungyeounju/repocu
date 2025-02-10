@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { firestore } from "./firebase-config.js";
+
 import { Route, Routes } from "react-router";
 import Dwsj0309 from "./pages/Dwsj0309";
 import Home from "./pages/main/Home";
+
 function App() {
-  console.log(firestore);
   return (
     <>
       <Routes>

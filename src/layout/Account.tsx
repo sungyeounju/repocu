@@ -131,6 +131,9 @@ const TabList = styled.ul`
       color: #191919;
     }
   }
+  @media (max-width: 321px) {
+    zoom: 0.8;
+  }
 `;
 const BtnTab = styled.button`
   width: 157px;
@@ -141,6 +144,9 @@ const BtnTab = styled.button`
 `;
 const InnerPerson = styled.div`
   margin-top: 30px;
+  @media (max-width: 321px) {
+    zoom: 0.8;
+  }
 `;
 const PersonList = styled.div`
   display: flex;

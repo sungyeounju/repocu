@@ -72,6 +72,9 @@ const BoxTicket = styled.div`
   &.fliped {
     transform: perspective(800px) rotateY(180deg);
   }
+  @media (max-width: 321px) {
+    zoom: 0.85;
+  }
 `;
 const TicketImg = styled.div`
   position: absolute;

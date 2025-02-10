@@ -21,6 +21,9 @@ const Wrapper = styled.div`
   height: 517px;
   margin: 150px auto 0;
   background: url(${bgShowbox}) center 0/100% no-repeat;
+  @media (max-width: 321px) {
+    zoom: 0.75;
+  }
 `;
 const ShowLight = keyframes`
   0%,40% {

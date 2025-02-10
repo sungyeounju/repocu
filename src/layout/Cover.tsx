@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
-import bgCover from "../assets/ico/bg_cover.png";
+import bgCover1 from "../assets/ico/bg_cover01.png";
+import bgCover2 from "../assets/ico/bg_cover02.png";
 import titCover from "../assets/ico/tit_cover.png";
 import icCalendar from "../assets/ico/ic_calendar_14.png";
 import icPlcae from "../assets/ico/ic_place_14.png";
@@ -42,17 +43,18 @@ export default Cover;
 const Wrapper = styled.div``;
 const Inner = styled.div`
   position: relative;
-  height: 100vh;
+  padding-top: 217%;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  background-repeat: no-repeat;
   &:before {
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url(${bgCover}) center top/100% no-repeat;
+    height: 300px;
+    background: url(${bgCover1}) center top/100% no-repeat;
     content: "";
   }
   &:after {
@@ -61,19 +63,21 @@ const Inner = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40%;
-    background: linear-gradient(0, #080c0d 30%, transparent);
+    height: 300px;
+    background: url(${bgCover2}) center bottom/100% no-repeat;
     content: "";
   }
 `;
 const Titimg = styled.img`
+  position: absolute;
+  top: 90px;
+  left: calc(50% - 115px);
   width: 233px;
-  margin-top: 90px;
 `;
 const Itembox = styled.div`
   position: absolute;
   left: 0;
-  bottom: 140px;
+  bottom: 160px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -95,7 +99,7 @@ const Item = styled.div`
 const Footer = styled.div`
   position: absolute;
   left: 0;
-  bottom: 40px;
+  bottom: 60px;
   width: 100%;
   display: flex;
   justify-content: center;

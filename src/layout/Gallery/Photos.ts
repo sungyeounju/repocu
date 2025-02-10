@@ -1,4 +1,4 @@
-const Photos = Array.from({ length: 17 }, (_, index) => {
+const Photos = Array.from({ length: 18 }, (_, index) => {
   const imageNum = index + 1;
   return {
     alt: `image${imageNum}`,

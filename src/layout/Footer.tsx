@@ -13,7 +13,6 @@ import icoConti from "../assets/ico/img_tobecontinued.png";
 import img01 from "../assets/image/img_frame01.png";
 import img02 from "../assets/image/img_frame02.png";
 import img03 from "../assets/image/img_frame03.png";
-import img04 from "../assets/image/img_frame04.png";
 import img05 from "../assets/image/img_frame05.png";
 
 function Footer() {
@@ -28,7 +27,7 @@ function Footer() {
       nameKo: "장동우",
     },
     {
-      castEn: "BIRDE",
+      castEn: "BRIDE",
       nameEn: "KIM SEOJEONG",
       castKo: "신부",
       nameKo: "김서정",
@@ -46,13 +45,13 @@ function Footer() {
       nameKo: "윤혜원",
     },
     {
-      castEn: "BIRDE'S FATHER",
+      castEn: "BRIDE'S FATHER",
       nameEn: "KIM JONGHWA",
       castKo: "신부 아버지",
       nameKo: "김종화",
     },
     {
-      castEn: "BIRDE'S MOTHER",
+      castEn: "BRIDE'S MOTHER",
       nameEn: "KIM JEONGHWA",
       castKo: "신부 어머니",
       nameKo: "김정화",
@@ -115,10 +114,6 @@ function Footer() {
             ></ImgVideo>
             <ImgVideo
               className="thumb-img04"
-              style={{ backgroundImage: `url(${img04})` }}
-            ></ImgVideo>
-            <ImgVideo
-              className="thumb-img05"
               style={{ backgroundImage: `url(${img05})` }}
             ></ImgVideo>
             <IcoTxt className="ico-txt"></IcoTxt>
@@ -240,12 +235,12 @@ const Video = styled.div`
     .thumb-img04 {
       animation: ${ImgVideoAni} 0.6s 4s linear forwards;
     }
-    .thumb-img05 {
-      animation: ${ImgVideoAni} 0.6s 5.5s linear forwards;
-    }
     .ico-txt {
-      animation: ${IcoRot} 1.5s 5.7s forwards;
+      animation: ${IcoRot} 1.5s 4.5s forwards;
     }
+  }
+  @media (max-width: 321px) {
+    zoom: 0.8;
   }
 `;
 const InnerVideo = styled.div`

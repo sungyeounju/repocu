@@ -5,17 +5,20 @@ import Showbox from "./../layout/Showbox";
 import Cast from "./../layout/Cast";
 import Ticket from "./../layout/Ticket";
 import PhotoGallery from "./../layout/Gallery/PhotoGallery";
-import PhotoGallery2 from "./../layout/Gallery/PhotoGallery2";
 import Location from "./../layout/Location";
 import Account from "./../layout/Account";
 import Footer from "./../layout/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import GuestBook from "./../layout/GuestBook";
+
 function Dwsj0309() {
   useEffect(() => {
     AOS.init();
+    AOS.refresh();
   }, []);
+
   return (
     <>
       <Container>
@@ -39,6 +42,7 @@ function Dwsj0309() {
         <div data-aos="fade-up" data-aos-duration="1500">
           <Account />
         </div>
+        <GuestBook />
         <Footer />
       </Container>
     </>
