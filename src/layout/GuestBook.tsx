@@ -167,11 +167,11 @@ function GuestBook() {
               <textarea
                 placeholder="내용을 입력하세요"
                 value={content}
-                maxLength={30}
+                maxLength={50}
                 onChange={(e) => setContent(e.target.value)}
               />
               <span className="txt-all">
-                <span className="txt-num">{content.length}</span>/30
+                <span className="txt-num">{content.length}</span>/50
               </span>
             </FormItem>
             <FormItem>
@@ -246,9 +246,9 @@ const InnerBook = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 210px;
-    height: 156px;
-    padding: 0 40px;
+    width: 250px;
+    height: 186px;
+    padding: 0 50px;
     background-size: 100%;
     background-repeat: no-repeat;
     &: nth-child(odd) {
@@ -285,8 +285,8 @@ const InnerBook = styled.div`
   }
   .btn-del {
     position: absolute;
-    right: 38px;
-    bottom: 12px;
+    right: 45px;
+    bottom: 16px;
     width: 24px;
     height: 24px;
     background: url(${btnEdit}) 0/100% no-repeat;

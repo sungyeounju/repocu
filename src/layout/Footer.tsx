@@ -138,7 +138,7 @@ function Footer() {
             })}
           </CastBox>
           <CastBox className="cast-box2">
-            <CastTit>CAST</CastTit>
+            <CastTit>SPECIAL</CastTit>
             {Casting2.map((item, idx) => {
               return (
                 <BoxItem key={idx}>
