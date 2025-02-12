@@ -42,7 +42,7 @@ function Footer() {
       castEn: "GROOM'S MOTHER",
       nameEn: "YOON HYEYEON",
       castKo: "신랑 어머니",
-      nameKo: "윤혜원",
+      nameKo: "윤혜연",
     },
     {
       castEn: "BRIDE'S FATHER",

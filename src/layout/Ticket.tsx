@@ -95,6 +95,7 @@ const TicketBox = styled.div`
   backface-visibility: hidden;
   span {
     position: absolute;
+    display: block;
   }
   .txt-date {
     left: 48px;
@@ -119,4 +120,7 @@ const TicketBox = styled.div`
     bottom: 85px;
   }
 `;
-const InnerTicket = styled.div``;
+const InnerTicket = styled.div`
+  width: 100%;
+  height: 100%;
+`;
