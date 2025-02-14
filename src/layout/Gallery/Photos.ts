@@ -3,7 +3,7 @@ const Photos = Array.from({ length: 18 }, (_, index) => {
   return {
     alt: `image${imageNum}`,
     source: require(`../../assets/image/image${imageNum}.png`),
-    width: "100%",
+    width: "auto",
     height: "auto",
   };
 });

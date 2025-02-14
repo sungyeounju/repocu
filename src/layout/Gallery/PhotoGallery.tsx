@@ -13,26 +13,52 @@ import "./styles.css";
 import Slide01 from "../../assets/ico/slide01.png";
 import Slide02 from "../../assets/ico/slide02.png";
 import Slide03 from "../../assets/ico/slide03.png";
+import icoVideo from "../../assets/ico/icoVideo.gif";
 import Title from "../../component/Title";
 
 function PhotoGallery() {
   useEffect(() => {
+    // PhotoSwipe 모달 감지하여 IcoVideo 추가
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "childList") {
+          const pswpElement = document.querySelector(".pswp--open");
+          if (pswpElement && !pswpElement.querySelector(".ico-video")) {
+            const icoVideo = document.createElement("div");
+            icoVideo.className = "ico-video";
+            pswpElement.appendChild(icoVideo);
+          }
+        }
+      });
+    });
+    // body 요소 감지하여 변화 발생 시 실행
+    const targetNode = document.body;
+    observer.observe(targetNode, { childList: true, subtree: true });
+    return () => observer.disconnect(); // 컴포넌트 언마운트 시 Observer 해제
+  }, []);
+
+  useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
       <div data-aos="fade-up" data-aos-duration="1500"></div>
       <Title title={"GALLERY"} />
       <Wrapper>
-        <Gallery>
+        <Gallery
+          options={{
+            zoom: false,
+            showAnimationDuration: 0,
+            hideAnimationDuration: 0,
+          }}
+        >
           <Swiper
             slidesPerView={"auto"}
             centeredSlides={true}
             loop={true}
             autoplay={{ delay: 2000, disableOnInteraction: false }}
             modules={[Autoplay]}
-            // onSlideChange={() => console.log("slide change")}
-            // onSwiper={(swiper) => console.log(swiper)}
           >
             {Photo.map((image, index) => {
               return (
@@ -66,6 +92,16 @@ function PhotoGallery() {
 }
 export default PhotoGallery;
 
+const IcoVideo = styled.span`
+  display: none;
+  position: fixed;
+  top: calc(50vh - 65px);
+  left: calc(50vw - 60px);
+  width: 170px;
+  height: 120px;
+  background: url(${icoVideo}) 0/100% no-repeat;
+  z-index: 9999999;
+`;
 const Wrapper = styled.div`
   .swiper-wrapper {
     transition: 0.5s;
