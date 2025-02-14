@@ -3,7 +3,7 @@
 .pswp--open .pswp__button,
 .pswp--open .pswp__top-bar {
   opacity: 0;
-  animation: fadeIn 1.2s forwards;
+  animation: fadeIn 1.3s forwards;
 }
 .ico-video {
   position: fixed;
@@ -13,7 +13,7 @@
   height: 80px;
   background: url(../../assets/ico/icoVideo.gif) 0/100% no-repeat;
   z-index: 9999999;
-  animation: fadeOut 1.2s forwards;
+  animation: fadeOut 1.3s forwards;
   opacity: 0.6;
 }
 /* 1초 동안 opacity 1로 변화 */
