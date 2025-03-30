@@ -1,0 +1,70 @@
+/* PhotoSwipe가 열릴 때 opacity 0 → 1로 변경 */
+.pswp--open .pswp__item,
+.pswp--open .pswp__button,
+.pswp--open .pswp__top-bar {
+  opacity: 0;
+  animation: fadeIn 1.3s forwards;
+}
+.ico-video {
+  position: fixed;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 50px);
+  width: 100px;
+  height: 40px;
+  background: url(../../../assets/img/sketch/heart.gif) 0/100% no-repeat;
+  z-index: 9999999;
+  animation: fadeOut 1.3s forwards;
+  opacity: 0.6;
+}
+/* 1초 동안 opacity 1로 변화 */
+@keyframes fadeIn {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0%,
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.pswp__zoom-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  transition: 0 !important;
+}
+.pswp__img {
+  /* width: 100vw !important;
+  height: auto !important;
+  top: 50%;
+  transform: translateY(-50%); */
+  object-fit: contain;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+.pswp--touch .pswp__button--arrow {
+  visibility: visible;
+  width: 40px;
+  height: 40px;
+  background: url(../../../assets/ico/btn_arrow_40.png) 0/100% no-repeat;
+}
+.pswp--touch .pswp__button--arrow--next {
+  transform: rotate(180deg);
+}
+.pswp--touch .pswp__button--arrow svg {
+  display: none;
+}

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap");
 @import url(./fonts/pretendard.css);
 @import url(./fonts/montserrat.css);
+@import url(./fonts/mordenmono.css);
 html,
 body,
 div,
@@ -153,7 +154,6 @@ button {
   text-indent: -9999px;
 }
 body {
-  background-color: #e9e3e3;
   text-align: center;
   color: #191919;
   line-height: 1.5;

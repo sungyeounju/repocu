@@ -54,4 +54,5 @@ const Container = styled.div`
   overflow: hidden;
   max-width: 500px;
   margin: 0 auto;
+  background-color: #e9e3e3;
 `;

@@ -6,7 +6,7 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "*": ["src/*"] // Adjust if your files are in `src/`
+      "@/*": ["src/*"] // Adjust if your files are in `src/`
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
