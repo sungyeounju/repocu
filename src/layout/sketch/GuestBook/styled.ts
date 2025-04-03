@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   background: url(${bgGuestBook}) 0 / cover no-repeat;
   .tit-g {
     color: #d685cb;
+    &:before {
+      background-image: url(${heart});
+    }
   }
 `;
 export const InnerBook = styled.div`

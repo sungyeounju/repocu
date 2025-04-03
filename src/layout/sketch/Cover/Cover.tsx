@@ -12,9 +12,9 @@ function Cover({ data }) {
               <S.Item>{data.master.brideEng}</S.Item>
               <S.Item>{data.master.groomEng}</S.Item>
             </S.Itembox>
-            <S.Footer>
-              <strong className="tit-cover" data-aos="fade-up"></strong>
-              <span className="txt-date" data-aos="fade-up">
+            <S.Footer data-aos="fade-up">
+              <strong className="tit-cover"></strong>
+              <span className="txt-date">
                 {data.cover.date}
                 <br />
                 {data.cover.date2}

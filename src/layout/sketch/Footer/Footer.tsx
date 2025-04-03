@@ -55,10 +55,10 @@ function Footer({ data }) {
             style={{ backgroundImage: `url(${AniImg02})` }}
           ></S.ImgThumb>
         </S.AniImg>
-        <S.FooterLogo data-aos="fade-up">
+        <S.FooterLogo data-aos="fade">
           <span className="screen-out"></span>
         </S.FooterLogo>
-        <S.ShareSns data-aos="fade-up">
+        <S.ShareSns data-aos="fade">
           <ul className="list-sns">
             <li>
               <Link

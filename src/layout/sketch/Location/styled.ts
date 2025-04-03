@@ -12,6 +12,7 @@ export const Wrpper = styled.div`
 export const CopyTxt = styled.span`
   display: block;
   margin-top: 30px;
+  font-size: 15px;
   .img-copy {
     display: inline-block;
     width: 16px;
@@ -22,6 +23,7 @@ export const CopyTxt = styled.span`
   }
 `;
 export const MapBox = styled.div`
+  overflow: hidden;
   height: 190px;
   margin-top: 40px;
   border: 1px solid #fff;

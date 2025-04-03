@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import markerImg from "../../assets/img/sketch/ic_mark.png";
 let mapInstance: naver.maps.Map | null = null;
 const loadScript = (src: string, callback: () => void) => {
   const script = document.createElement("script");
@@ -43,6 +43,10 @@ function MapApi({
     const marker = new naver.maps.Marker({
       map: mapInstance ?? undefined,
       position: new naver.maps.LatLng(latitude, longitude),
+      icon: {
+        url: markerImg,
+        scaledSize: new naver.maps.Size(35, 35),
+      },
     });
 
     // Marker 클릭 시 지도 초기화

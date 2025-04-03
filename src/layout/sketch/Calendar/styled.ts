@@ -39,7 +39,7 @@ export const Month = styled.strong`
   width: 146px;
   height: 32px;
   margin: 54px auto 0;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   font-family: "modernmono";
   background: url(${MonthTape}) 0/100% no-repeat;

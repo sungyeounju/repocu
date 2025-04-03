@@ -65,8 +65,8 @@ export const Thumb = styled.span`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url(${ImgHeart}) 0/100%;
+    height: 101%;
+    background: url(${ImgHeart}) 0 / cover no-repeat;
     content: "";
   }
   &.thumb-img {

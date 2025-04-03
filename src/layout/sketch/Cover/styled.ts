@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import pattern_02 from "../../../assets/img/sketch/pattern_cover.png";
 import title from "../../../assets/img/sketch/txt_cover.png";
+
 export const Wrapper = styled.div`
   position: relative;
   height: 100vh;
@@ -24,7 +25,7 @@ export const Titimg = styled.img``;
 export const Itembox = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 72px 20px 0;
+  padding: 72px 30px 0;
 `;
 export const Item = styled.strong`
   font-family: "KCC-Ahnchangho";

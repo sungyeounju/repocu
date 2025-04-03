@@ -4,7 +4,7 @@ import icoInsta from "../../../assets/img/sketch/ico_instagram.png";
 import icoShare from "../../../assets/img/sketch/ico_share.png";
 export const Wrapper = styled.div`
   position: relative;
-  padding-bottom: 74px;
+  padding-bottom: 100px;
 `;
 export const Outro = styled.div`
   width: 100%;
@@ -51,7 +51,7 @@ export const ImgThumb = styled.span`
   background-size: cover;
   &.img-thumb02 {
     opacity: 0;
-    animation: ${AniThumb} 3s steps(2) infinite;
+    animation: ${AniThumb} 4s steps(2) infinite;
   }
 `;
 export const FooterLogo = styled.span`

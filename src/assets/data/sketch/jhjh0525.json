@@ -33,9 +33,13 @@
   "location": {
     "address": "충북 청주시 청원구 내수은 충정대로 400",
     "hall": "메리다컨벤션(1층 달리아홀)",
-    "lat": "36.68632729",
+    "lat": "36.6862",
     "long": "127.511",
-    "mapapi": { "naver": "dd", "kakao": "ff", "tmap": "aa" },
+    "mapapi": {
+      "naver": "https://naver.me/FFGZ9QcV",
+      "kakao": "https://kko.kakao.com/tdG7S7vTxu",
+      "tmap": "https://tmap.life/1ea91fda"
+    },
     "cont": [
       {
         "title": "대중교통 이용 시",
@@ -80,7 +84,7 @@
     "groomMother": { "account": "농협은행 415050-52-051024", "kakaopay": "" }
   },
   "gallery": {
-    "number": "18"
+    "number": "20"
   },
   "footer": {
     "shareUrl": "https://www.repocu.shop/Jhjh0525",
