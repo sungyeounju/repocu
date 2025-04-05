@@ -9,13 +9,13 @@ function Account() {
   const groomList = [
     {
       tag: "신랑",
-      name: "조진희",
+      name: "진희",
       value1: "신한은행 110-343-677847",
-      value2: "신한은행 110-343-677847",
+      value2: "https://qr.kakaopay.com/FIWNO4cKd",
     },
     {
       tag: "신부",
-      name: "이진희",
+      name: "진희",
       value1: "국민은행 95628-0221-61",
       value2: "https://qr.kakaopay.com/Ej9Gb9dV3",
     },
