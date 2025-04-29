@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Route, Routes } from "react-router";
 import Dwsj0309 from "./pages/Dwsj0309";
@@ -11,7 +10,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/Dwsj0309" element={<Dwsj0309 />}></Route> */}
+        <Route path="/Dwsj0309" element={<Dwsj0309 />}></Route>
         <Route path="/Jhjh0525" element={<Jhjh0525 />}></Route>
       </Routes>
     </>
@@ -19,7 +18,3 @@ function App() {
 }
 
 export default App;
-
-const Container = styled.div`
-  overflow: hidden;
-`;
